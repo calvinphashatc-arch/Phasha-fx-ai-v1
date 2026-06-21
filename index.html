@@ -1,121 +1,73 @@
+export default function LandingPage() {
+  return (
+    <main className="min-h-screen bg-black text-white">
+      {/* Hero */}
+      <section className="text-center py-24">
+        <h1 className="text-6xl font-bold text-yellow-400">
+          PHASHA FX AI
+        </h1>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phasha FX AI — Institutional Grade AI Trading Assistant</title>
-    <script src="https://tailwindcss.com"></script>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <style>
-        body { 
-            background-color: #0B0A07; 
-            color: #E2E8F0; 
-            font-family: 'Inter', sans-serif; 
-        }
-        .serif-heading {
-            font-family: 'Cinzel', serif;
-        }
-        .gold-primary { color: #E5A93C; }
-        .gold-bg-gradient {
-            background: linear-gradient(180deg, #E5A93C 0%, #B37D22 100%);
-        }
-        .dark-card {
-            background-color: #11100C;
-            border: 1px solid rgba(229, 169, 60, 0.15);
-        }
-    </style>
-</head>
-<body class="antialiased selection:bg-amber-500 selection:text-black">
-
-    <!-- Top Running Metric Bar -->
-    <div class="bg-[#070604] border-b border-[#1A1813] px-4 py-2 flex overflow-x-auto gap-6 justify-center text-[10px] font-mono tracking-wider text-gray-500 whitespace-nowrap scrollbar-none">
-        <div><span class="text-gray-400">BTCUSD</span> <span class="text-yellow-500">104,220 +1.18%</span></div>
-        <div><span class="text-gray-400">XAUUSD</span> <span class="text-yellow-500">3,365.20 +0.85%</span></div>
-    </div>
-
-    <!-- Layout Branding Navigation -->
-    <nav class="border-b border-[#1A1813] px-4 py-4 flex justify-between items-center bg-[#0B0A07]">
-        <div class="flex items-center gap-2">
-            <div class="w-7 h-7 rounded bg-[#E5A93C] flex items-center justify-center font-black text-black text-sm shadow-md">⚡</div>
-            <div>
-                <div class="text-xs font-black tracking-widest text-white uppercase">Phasha FX AI</div>
-                <div class="text-[8px] tracking-widest text-gray-500 uppercase font-bold">Institutional Grade</div>
-            </div>
-        </div>
-        <div class="flex items-center gap-4 text-[10px] font-bold tracking-widest text-gray-400 uppercase">
-            <a href="#pricing" class="text-[#E5A93C]">Pricing</a>
-        </div>
-    </nav>
-
-    <!-- Content Module Frame -->
-    <main class="max-w-md mx-auto px-4 pt-12 pb-24 text-center space-y-8">
-        
-        <!-- Verification Banner Badge -->
-        <div class="inline-flex items-center gap-2 bg-[#11100C] border border-yellow-500/10 text-[10px] font-bold tracking-widest text-gray-400 px-3 py-1.5 rounded-full uppercase">
-            <span class="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
-            <span>Live • 12,400+ Traders Live</span>
-        </div>
-
-        <!-- Hero Title Header Display Matching Screenshot -->
-        <div class="space-y-2">
-            <h1 class="serif-heading text-3xl font-black uppercase tracking-wide leading-tight text-white">
-                The AI That Reads
-            </h1>
-            <h1 class="serif-heading text-4xl font-black uppercase tracking-wider gold-primary leading-tight">
-                Any Chart.<br>Any Platform.
-            </h1>
-        </div>
-
-        <!-- Description Matrix Summary Text -->
-        <p class="text-gray-400 text-xs sm:text-sm max-w-xs mx-auto leading-relaxed font-normal">
-            Upload a screenshot from MT5, TradingView, Binance, or Pocket Option — Phasha FX AI analyzes it with institutional Smart Money logic and delivers BUY/SELL signals with entry, SL, and TP in seconds.
+        <p className="text-3xl mt-6">
+          The AI That Reads Any Chart.
         </p>
 
-        <!-- Big Bright Gold Call-To-Action Button Block -->
-        <div class="pt-2">
-            <a href="https://whop.com" class="w-full block gold-bg-gradient text-black font-black text-xs tracking-widest py-4 rounded uppercase shadow-lg shadow-yellow-600/10 hover:opacity-95 active:scale-[0.99] transition-all">
-                🚀 Start Free 7-Day Trial
-            </a>
+        <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          Upload a screenshot from TradingView, MT5, Binance,
+          Pocket Option or any trading platform. Get AI-powered
+          Smart Money analysis in seconds.
+        </p>
+
+        <button className="mt-10 bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-xl font-bold text-xl">
+          Start Free
+        </button>
+      </section>
+
+      {/* Features */}
+      <section className="grid md:grid-cols-3 gap-8 px-10 pb-20">
+        <div className="bg-zinc-900 rounded-2xl p-8">
+          <h3>📈 AI Chart Analysis</h3>
+          <p>Reads forex, crypto and indices instantly.</p>
         </div>
 
-        <!-- Subscription Access Grid Structure -->
-        <div id="pricing" class="pt-8 space-y-4 text-left">
-            <h2 class="text-center font-black text-xs tracking-widest uppercase text-gray-400 mb-6">Available Memberships</h2>
-
-            <!-- Plan Item: Beginner -->
-            <div class="dark-card rounded-xl p-5 flex items-center justify-between">
-                <div>
-                    <h3 class="text-gray-400 font-bold uppercase text-[10px] tracking-wider">Beginner Plan</h3>
-                    <div class="text-xl font-black text-white mt-0.5">R199<span class="text-[10px] text-gray-500 font-normal uppercase tracking-normal">/mo</span></div>
-                </div>
-                <a href="https://whop.com" class="border border-[#E5A93C] text-[#E5A93C] font-bold text-[10px] px-4 py-2 rounded uppercase transition-colors">Select</a>
-            </div>
-
-            <!-- Plan Item: Pro Trader -->
-            <div class="dark-card border-2 border-[#E5A93C] rounded-xl p-5 flex items-center justify-between bg-[#16140E]">
-                <div>
-                    <h3 class="text-[#E5A93C] font-black uppercase text-[10px] tracking-wider">Pro Trader</h3>
-                    <div class="text-xl font-black text-white mt-0.5">R490<span class="text-[10px] text-gray-400 font-normal uppercase tracking-normal">/mo</span></div>
-                </div>
-                <a href="https://whop.com" class="gold-bg-gradient text-black font-black text-[10px] px-4 py-2 rounded uppercase shadow-md hover:opacity-90 transition-opacity">Select Plan</a>
-            </div>
-
-            <!-- Plan Item: Elite Institutional -->
-            <div class="dark-card rounded-xl p-5 flex items-center justify-between">
-                <div>
-                    <h3 class="text-gray-400 font-bold uppercase text-[10px] tracking-wider">Elite Institutional</h3>
-                    <div class="text-xl font-black text-white mt-0.5">R990<span class="text-[10px] text-gray-500 font-normal uppercase tracking-normal">/mo</span></div>
-                </div>
-                <a href="https://whop.com" class="border border-gray-800 text-gray-400 font-bold text-[10px] px-4 py-2 rounded uppercase transition-colors">Select</a>
-            </div>
+        <div className="bg-zinc-900 rounded-2xl p-8">
+          <h3>⚡ Fast Results</h3>
+          <p>Receive detailed trade ideas in seconds.</p>
         </div>
+
+        <div className="bg-zinc-900 rounded-2xl p-8">
+          <h3>🌍 Works Worldwide</h3>
+          <p>Supports any broker or trading platform.</p>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-20 text-center">
+        <h2 className="text-5xl font-bold mb-10">
+          Membership Plans
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+          <div className="bg-zinc-900 p-8 rounded-2xl">
+            <h3>Starter</h3>
+            <p className="text-5xl font-bold">$19</p>
+            <button>Choose Plan</button>
+          </div>
+
+          <div className="bg-yellow-500 text-black p-8 rounded-2xl">
+            <h3>Pro Trader</h3>
+            <p className="text-5xl font-bold">$49</p>
+            <button>Most Popular</button>
+          </div>
+
+          <div className="bg-zinc-900 p-8 rounded-2xl">
+            <h3>Elite Institutional</h3>
+            <p className="text-5xl font-bold">$99</p>
+            <button>Go Elite</button>
+          </div>
+
+        </div>
+      </section>
     </main>
-
-    <!-- Footer Copyright Notice -->
-    <footer class="text-center text-[9px] text-gray-600 py-10 bg-[#070604] border-t border-[#1A1813] px-4 font-mono uppercase tracking-wider">
-        &copy; 2026 Phasha FX AI. Verified via Secure Ecosystem Pipelines.
-    </footer>
-
-</body>
-</html>
+  );
+}
